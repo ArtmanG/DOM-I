@@ -40,3 +40,42 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+// Nav
+const navBar = document.querySelectorAll('nav a');
+// console.log(navBar);
+
+for (i = 0; i < navBar.length; i++){
+  navBar[i].innerHTML = siteContent['nav'][`nav-item-${i+1}`];
+}
+
+// navBar[0].textContent = 'Services';
+// console.log(navBar[0]);
+// navBar[1].textContent = 'Product';
+// navBar[2].textContent = 'Vision';
+// navBar[3].textContent = 'Features';
+// navBar[4].textContent = 'About';
+// navBar[5].textContent = 'Content';
+
+// CTA
+const h1 = document.querySelector('h1');
+console.log(h1);
+h1.textContent = 'DOM is Awesome';
+
+const ctaButton = document.querySelector('button');
+console.log(ctaButton);
+ctaButton.textContent = 'Get Started';
+
+const ctaImg = document.getElementById('cta-img');
+console.log(ctaImg);
+ctaImg.src = 'img/header-img.png';
+ctaImg.alt = 'Image of a code snippet.';
+
+// Middle Img
+const middleImg = document.getElementById('middle-img');
+console.log(middleImg);
+middleImg.src = 'img/mid-page-accent.jpg';
+middleImg.alt = 'Image of code snippets across the screen';
+
+// Main Content
