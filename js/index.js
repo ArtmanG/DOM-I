@@ -59,13 +59,36 @@ for (i = 0; i < navBar.length; i++){
   navBar[i].textContent = siteContent['nav'][`nav-item-${i+1}`];
 }
 
-// navBar[0].textContent = 'Services';
-// console.log(navBar[0]);
-// navBar[1].textContent = 'Product';
-// navBar[2].textContent = 'Vision';
-// navBar[3].textContent = 'Features';
-// navBar[4].textContent = 'About';
-// navBar[5].textContent = 'Content';
+// Before I figured out the for loop to automate this.
+// navBar[0].textContent = siteContent['nav'][`nav-item-1`];
+// navBar[1].textContent = siteContent['nav'][`nav-item-2`];
+// navBar[2].textContent = siteContent['nav'][`nav-item-3`];
+// navBar[3].textContent = siteContent['nav'][`nav-item-4`];
+// navBar[4].textContent = siteContent['nav'][`nav-item-5`];
+// navBar[5].textContent = siteContent['nav'][`nav-item-6`];
+
+// Creates the parent element which points to the nav.
+const navi = document.querySelector('nav');
+// Creates the new a elements which will go into the nav.
+const newA1 = document.createElement('a');
+newA1.textContent = 'Whatever';
+const newA2 = document.createElement('a');
+newA2.textContent = 'You Want';
+// parent element. before/after newA element
+navi.prepend(newA1);
+navi.appendChild(newA2);
+
+// This goes below the new nav elements so they also are turned green.
+// querySelectorAll selects all the 'nav a' elements.
+const navColor = document.querySelectorAll('nav a');
+// console.log(navColor);
+// .forEach() goes through each 'nav a' and styles the color green.
+navColor.forEach(aColor => {
+  aColor.style.color ='green';
+});
+
+
+
 
 // CTA
 const header = document.querySelector('h1');
@@ -81,22 +104,25 @@ const ctaImg = document.getElementById('cta-img');
 ctaImg.src = siteContent["cta"]["img-src"];
 ctaImg.alt = 'Image of a code snippet.';
 
+
 // Middle Img
 const middleImg = document.getElementById('middle-img');
 // console.log(middleImg);
 middleImg.src = siteContent["main-content"]["middle-img-src"];
 middleImg.alt = 'Image of code snippets across the screen';
 
+
 // Top Content
 const mainH4 = document.getElementsByTagName('h4');
-console.log(mainH4);
+// console.log(mainH4);
 mainH4[0].textContent = siteContent['main-content']['features-h4'];
 mainH4[1].textContent = siteContent['main-content']['about-h4'];
 
 const mainPs = document.getElementsByTagName('p')
-console.log(mainPs);
+// console.log(mainPs);
 mainPs[0].textContent = siteContent['main-content']['features-content'];
 mainPs[1].textContent = siteContent['main-content']['about-content'];
+
 
 // Bottom Content
 
@@ -109,6 +135,7 @@ mainH4[4].textContent = siteContent['main-content']['vision-h4'];
 mainPs[2].textContent = siteContent['main-content']['services-content'];
 mainPs[3].textContent = siteContent['main-content']['product-content'];
 mainPs[4].textContent = siteContent['main-content']['vision-content'];
+
 
 // Contact
 
