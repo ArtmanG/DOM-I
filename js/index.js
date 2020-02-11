@@ -98,9 +98,28 @@ console.log(mainPs);
 mainPs[0].textContent = siteContent['main-content']['features-content'];
 mainPs[1].textContent = siteContent['main-content']['about-content'];
 
-
-
-
 // Bottom Content
 
+// H4's
+mainH4[2].textContent = siteContent['main-content']['services-h4'];
+mainH4[3].textContent = siteContent['main-content']['product-h4'];
+mainH4[4].textContent = siteContent['main-content']['vision-h4'];
+
+// P's
+mainPs[2].textContent = siteContent['main-content']['services-content'];
+mainPs[3].textContent = siteContent['main-content']['product-content'];
+mainPs[4].textContent = siteContent['main-content']['vision-content'];
+
+// Contact
+
+// H4's
+mainH4[5].textContent = siteContent['contact']['contact-h4'];
+
+// P's
+mainPs[5].textContent = siteContent['contact']['address'];
+mainPs[6].textContent = siteContent['contact']['phone'];
+mainPs[7].textContent = siteContent['contact']['email'];
+
+// Footer
+mainPs[8].textContent = siteContent['footer']['copyright'];
 
