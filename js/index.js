@@ -8,30 +8,39 @@ const siteContent = {
     "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
+
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": `DOM<br> Is<br> Awesome`,
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
+
   "main-content": {
     "features-h4":"Features",
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+
     "about-h4":"About",
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+
     "middle-img-src": "img/mid-page-accent.jpg",
+
     "services-h4":"Services",
     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+
     "product-h4":"Product",
     "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+
     "vision-h4":"Vision",
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
+
   "contact": {
     "contact-h4" : "Contact",
     "address" : "123 Way 456 Street Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
+
   "footer": {
     "copyright" : "Copyright Great Idea! 2018"
   },
@@ -47,7 +56,7 @@ const navBar = document.querySelectorAll('nav a');
 // console.log(navBar);
 
 for (i = 0; i < navBar.length; i++){
-  navBar[i].innerHTML = siteContent['nav'][`nav-item-${i+1}`];
+  navBar[i].textContent = siteContent['nav'][`nav-item-${i+1}`];
 }
 
 // navBar[0].textContent = 'Services';
@@ -59,29 +68,37 @@ for (i = 0; i < navBar.length; i++){
 // navBar[5].textContent = 'Content';
 
 // CTA
-const h1 = document.querySelector('h1');
-console.log(h1);
-h1.innerHTML = 'DOM <br> is <br> Awesome';
+const header = document.querySelector('h1');
+// console.log(header);
+header.innerHTML = siteContent["cta"]["h1"];
 
 const ctaButton = document.querySelector('button');
-console.log(ctaButton);
-ctaButton.textContent = 'Get Started';
+// console.log(ctaButton);
+ctaButton.textContent = siteContent["cta"]["button"];
 
 const ctaImg = document.getElementById('cta-img');
-console.log(ctaImg);
-ctaImg.src = 'img/header-img.png';
+// console.log(ctaImg);
+ctaImg.src = siteContent["cta"]["img-src"];
 ctaImg.alt = 'Image of a code snippet.';
 
 // Middle Img
 const middleImg = document.getElementById('middle-img');
-console.log(middleImg);
-middleImg.src = 'img/mid-page-accent.jpg';
+// console.log(middleImg);
+middleImg.src = siteContent["main-content"]["middle-img-src"];
 middleImg.alt = 'Image of code snippets across the screen';
 
 // Top Content
-const topContent = document.querySelectorAll('.top-content h4');
-console.log(topContent);
-// topContent.textContent = siteContent[]
+const mainH4 = document.getElementsByTagName('h4');
+console.log(mainH4);
+mainH4[0].textContent = siteContent['main-content']['features-h4'];
+mainH4[1].textContent = siteContent['main-content']['about-h4'];
+
+const mainPs = document.getElementsByTagName('p')
+console.log(mainPs);
+mainPs[0].textContent = siteContent['main-content']['features-content'];
+mainPs[1].textContent = siteContent['main-content']['about-content'];
+
+
 
 
 // Bottom Content
