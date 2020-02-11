@@ -67,6 +67,7 @@ for (i = 0; i < navBar.length; i++){
 // navBar[4].textContent = siteContent['nav'][`nav-item-5`];
 // navBar[5].textContent = siteContent['nav'][`nav-item-6`];
 
+
 // Creates the parent element which points to the nav.
 const navi = document.querySelector('nav');
 // Creates the new a elements which will go into the nav.
@@ -78,10 +79,12 @@ newA2.textContent = 'You Want';
 navi.prepend(newA1);
 navi.appendChild(newA2);
 
+
 // This goes below the new nav elements so they also are turned green.
 // querySelectorAll selects all the 'nav a' elements.
 const navColor = document.querySelectorAll('nav a');
 // console.log(navColor);
+
 // .forEach() goes through each 'nav a' and styles the color green.
 navColor.forEach(aColor => {
   aColor.style.color ='green';
@@ -91,8 +94,11 @@ navColor.forEach(aColor => {
 
 
 // CTA
+// querySelector selects the first 'h1'
 const header = document.querySelector('h1');
 // console.log(header);
+
+// innerHTML is used to change the content in header to whatever in in this part of the siteContent object. innerHTML is specifically used over textContent for the <br> in the h1.
 header.innerHTML = siteContent["cta"]["h1"];
 
 const ctaButton = document.querySelector('button');
@@ -113,8 +119,11 @@ middleImg.alt = 'Image of code snippets across the screen';
 
 
 // Top Content
+// getElementByTagName is grabbing all the h4
 const mainH4 = document.getElementsByTagName('h4');
 // console.log(mainH4);
+
+// I only need specific ones so I add [index] to point to directly which one I want.
 mainH4[0].textContent = siteContent['main-content']['features-h4'];
 mainH4[1].textContent = siteContent['main-content']['about-h4'];
 
