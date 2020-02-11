@@ -61,7 +61,7 @@ for (i = 0; i < navBar.length; i++){
 // CTA
 const h1 = document.querySelector('h1');
 console.log(h1);
-h1.textContent = 'DOM is Awesome';
+h1.innerHTML = 'DOM <br> is <br> Awesome';
 
 const ctaButton = document.querySelector('button');
 console.log(ctaButton);
@@ -78,4 +78,12 @@ console.log(middleImg);
 middleImg.src = 'img/mid-page-accent.jpg';
 middleImg.alt = 'Image of code snippets across the screen';
 
-// Main Content
+// Top Content
+const topContent = document.querySelectorAll('.top-content h4');
+console.log(topContent);
+// topContent.textContent = siteContent[]
+
+
+// Bottom Content
+
+
